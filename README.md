@@ -1,58 +1,45 @@
-# Discord Auto-Poster Bot [ROBOT FACE]  
-*A simple automated tool for posting messages to Discord channels*
+# Discord Auto-Poster Bot
+
+A simple automated tool for posting messages to Discord channels at specified intervals.
 
 ## Prerequisites
 - modules such as: requests, sqlite3, time installed
 
-## Getting Started [ROCKET SHIP]  
+## Getting Started
 
-1. Launch the program by running `start.bat`  
-2. Enter your Discord account token (see instructions below) [KEY SYMBOL]  
-3. Configure the auto-poster settings [CLIPBOARD WITH CHECKMARK]  
+1. Run `start.bat`
+2. Enter your Discord account token (see instructions below)
+3. Configure the auto-poster settings as prompted
 
-## How to Get Your Discord Token [MAGNIFYING GLASS]  
+## How to Get Your Discord Token
 
-[WARNING SIGN] Before proceeding, please note that your token gives full account access. Guard it carefully!  
+1. Log in to your Discord account in a web browser
+2. Open Developer Tools (Ctrl+Shift+I)
+3. Go to the Network tab
+4. Filter requests with `/api`
+5. Look for the `science` request
+6. Find the `authorization` parameter in the headers
+7. Copy its value
+8. Paste it into the program when prompted
 
-1. Visit Discord.com and log in [COMPUTER SCREEN]  
-2. Open Developer Tools (Ctrl+Shift+I) [WRENCH TOOL]  
-3. Navigate to the Network tab [NETWORK DIAGRAM]  
-4. Filter requests by typing `/api` [FILTER ICON]  
-5. Find and select the `science` request [SCIENCE FLASK]  
-6. In the Headers section, locate the `authorization` parameter [LOCK ICON]  
-7. Copy the long token string [COPY SYMBOL]  
-8. Paste it into the program when prompted [PASTE SYMBOL]  
+**Warning:** Never share your token with anyone as it provides full access to your account.
 
-## Configuration Steps [SETTINGS MENU]  
+## Configuration Steps in the Program
 
-1. **Channel Targets** [SPEECH BUBBLES]  
-   - Enter channel IDs where messages should be sent  
+1. **Channel IDs**: Enter the channel IDs where the auto-poster should send messages
+2. **Message Count**: Specify how many times the messages should be sent
+3. **Interval**: Set the delay between messages in seconds (e.g., 60 for 1 minute)
+   - Note: The bot will respect Discord's rate limits and skip sending if hitting cooldown
+4. **Message Content**: Enter the message to be sent
 
-2. **Message Quantity** [NUMBERED LIST]  
-   - Set how many times to send the message  
+## Persistent Configuration
 
-3. **Timing Control** [CLOCK FACE]  
-   - Specify delay between messages in seconds (60 = 1 minute)  
-   - [NOTE] Auto-respects Discord rate limits  
+- On subsequent runs, the program will detect and offer to restore settings from previous sessions
+- Configuration data is stored in a local database file
 
-4. **Message Content** [PENCIL ON PAPER]  
-   - Enter what you want the bot to say  
+## Disclaimer
 
-## Persistent Configuration [DATABASE]  
-
-- Your settings are automatically saved [FLOPPY DISK]  
-- Next launch will offer to restore previous configuration [REFRESH ARROWS]  
-
-## Important Disclaimer [WARNING TRIANGLE]  
-
-**The creator takes no responsibility for:**  
-- Violations of Discord's Terms of Service [SCROLL]  
-- Account bans resulting from misuse [BANNED SIGN]  
-- Any unethical applications [ETHICS SCALE]  
-
-*This is an educational tool only* [GRADUATION CAP]  
-
-## Support [LIFE PRESERVER]  
-
-For assistance, please open a GitHub issue [CONVERSATION BUBBLES]  
+**The creator of this auto-poster is not responsible for any misuse of this tool.**
+- Use Discord bots and automation in compliance with Discord's Terms of Service
+- This tool is provided for educational purposes only
 
